@@ -6,7 +6,7 @@ export const portfolioData = {
     subtitle: "A Software Developer passionate about building smart, inclusive, and user-centered digital solutions.",
     tagline: '"Creating scalable and accessible solutions powered by modern tech."',
     profileImage: {
-      src: "/assets/main.png", // Fixed: Added leading slash
+      src: "/assets/main.png", 
       alt: "Ezzah - Software Developer"
     },
     ctaButtons: [
@@ -82,7 +82,7 @@ export const portfolioData = {
       description: "A web and mobile platform that allows students to upload, share, and access study materials collaboratively. Includes real-time chatrooms by subject, AI-powered quiz generation, and file management features integrated with Firebase and TFLite.",
       tech: ["Flutter", "TensorFlow Lite", "Firebase", "Python"],
       image: {
-        src: "/assets/studyapp.png", // Fixed: Added leading slash
+        src: "/assets/studyapp.png", 
         alt: "Crowdsourced Study Material App"
       },
       links: [
@@ -95,7 +95,7 @@ export const portfolioData = {
       description: "A community-based donation app designed to reduce food waste by connecting donors with nearby recipients in need. Features include geolocation, donation tracking, and user verification — built with a focus on accessibility and social impact.",
       tech: ["React Native", "Firebase"],
       image: {
-        src: "/assets/foodshare.png", // Fixed: Added leading slash
+        src: "/assets/foodshare.png", 
         alt: "FoodShare"
       },
       links: [
@@ -108,7 +108,7 @@ export const portfolioData = {
       description: "An intelligent inventory tracking app that uses AI to remind users before supplies run out. Supports image-based input, smart notifications, and consumption prediction — ideal for household and small business use.",
       tech: ["Flutter", "Firebase", "Python", "Google Cloud Vision"],
       image: {
-        src: "/assets/neverout.png", // Fixed: Added leading slash
+        src: "/assets/neverout.png", 
         alt: "NeverOut"
       },
       links: [

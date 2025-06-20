@@ -174,11 +174,6 @@ const Portfolio = () => {
             ))}
           </div>
           
-          <div className="carousel-controls">
-            <button className="carousel-btn" onClick={previousProject}>‹</button>
-            <button className="carousel-btn" onClick={nextProject}>›</button>
-          </div>
-          
           <div className="carousel-indicators">
             {portfolioData.projects.map((_, index) => (
               <div 
