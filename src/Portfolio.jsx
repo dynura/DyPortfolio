@@ -5,6 +5,20 @@ import { useCarousel } from './hooks/useCarousel';
 import { portfolioData } from './data/portfolioData';
 import './styles/Portfolio.css';
 
+// Import images from src/assets folder
+import mainImage from './assets/main.png';
+import studyappImage from './assets/studyapp.png';
+import foodshareImage from './assets/foodshare.png';
+import neveroutImage from './assets/neverout.png';
+
+// Create image mapping
+const imageMap = {
+  '/assets/main.png': mainImage,
+  '/assets/studyapp.png': studyappImage,
+  '/assets/foodshare.png': foodshareImage,
+  '/assets/neverout.png': neveroutImage
+};
+
 const Portfolio = () => {
   const { visibleSections, sectionsRef, scrollToSection } = useAnimations();
   const { currentProject, nextProject, previousProject, goToProject } = useCarousel(portfolioData.projects.length);
@@ -33,9 +47,13 @@ const Portfolio = () => {
             <div className="character-container">
               <div className="character-image">
                 <img 
-                  src={portfolioData.personal.profileImage.src} 
+                  src={imageMap[portfolioData.personal.profileImage.src] || portfolioData.personal.profileImage.src}
                   alt={portfolioData.personal.profileImage.alt}
                   className="profile-image"
+                  onError={(e) => {
+                    console.error('Failed to load image:', e.target.src);
+                    e.target.style.display = 'none';
+                  }}
                 />
               </div>
             </div>
@@ -143,9 +161,13 @@ const Portfolio = () => {
                 </div>
                 <div className="project-image">
                   <img 
-                    src={project.image.src}
+                    src={imageMap[project.image.src] || project.image.src}
                     alt={project.image.alt}
                     className="project-img"
+                    onError={(e) => {
+                      console.error('Failed to load project image:', e.target.src);
+                      e.target.style.display = 'none';
+                    }}
                   />
                 </div>
               </div>
